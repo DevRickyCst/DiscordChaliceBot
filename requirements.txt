@@ -1,0 +1,5 @@
+discord_interactions
+PyNaCl
+gTTS
+PyYAML
+boto3==1.28.54

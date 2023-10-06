@@ -1,0 +1,23 @@
+- name: rank
+  description: Get the rank of a summoner.
+  options:
+    - name: summonner
+      description: The summonner
+      type: 3 # string
+      required: true
+
+- name: info_champ
+  description: Get the information of a champion.
+  options:
+    - name: champion
+      description: The Champion
+      type: 3 # string
+      required: true
+
+- name: spells_champ
+  description: Describe spells of a champion.
+  options:
+    - name: champion
+      description: The Champion
+      type: 3 # string
+      required: true

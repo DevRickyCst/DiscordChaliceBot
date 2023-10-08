@@ -1,9 +1,0 @@
-from chalicelib.discord import DiscordBot
-
-DISCORD_PUBLIC_KEY = "d543849d7e83e31b062952f9c85c9859276e3d6a7fd8da9c0c7b413424103711"
-APPLICATION_ID = "1155276684027756636"
-TOKEN = "MTE1NTI3NjY4NDAyNzc1NjYzNg.GchyH6.q9zSYeMhEfvUqQnefeiZUfseu4pM-IU6VrKnZc"
-
-discord = DiscordBot(APPLICATION_ID, DISCORD_PUBLIC_KEY, TOKEN)
-
-discord.register_commands()

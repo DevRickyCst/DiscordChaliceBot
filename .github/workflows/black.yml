@@ -9,3 +9,4 @@ jobs:
     steps:
       - name: Check with Black
         run: docker run --rm pyfound/black:latest_release black .
+

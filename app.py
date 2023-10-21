@@ -32,9 +32,8 @@ app.register_middleware(ping_handler, "all")
 @app.route("/", methods=["POST"])
 def index():
     params = app.current_request.json_body
-    data = params["data"]
-    command_name = data["name"]
+    print(params)
 
-    response = {"type": 4, "data": {"content": params}}
+    response = {"type": 4, "data": {"content": 'hello'}}
 
     return response

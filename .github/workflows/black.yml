@@ -1,0 +1,11 @@
+name: Python CI
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check with Black
+        run: docker run --rm pyfound/black:latest_release black .

@@ -13,3 +13,5 @@ jobs:
           src: "."
           jupyter: false
           version: "21.5b1"
+      - name: Run black
+        run: blake .

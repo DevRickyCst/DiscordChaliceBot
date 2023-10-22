@@ -18,7 +18,6 @@ class DiscordBot:
         self.commands = yaml.safe_load(yaml_content)
 
     def register_commands(self):
-
         URL = f"https://discord.com/api/v10/applications/{self.application_id}/commands"
 
         for command in self.commands:
@@ -30,7 +29,6 @@ class DiscordBot:
                 print(response.content)
 
     def delete_commands(self):
-
         URL = f"https://discord.com/api/v10/applications/{self.application_id}/commands"
 
         for command in self.commands:

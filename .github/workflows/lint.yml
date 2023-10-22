@@ -19,3 +19,4 @@ jobs:
       run: |
         black $(git ls-files '*.py')
         isort $(git ls-files '*.py')
+        

@@ -1,6 +1,8 @@
-from nacl.signing import VerifyKey
 from chalice import Response
+from nacl.signing import VerifyKey
+
 from app import DISCORD_BOT_PUBLIC_KEY
+
 
 def verify_key(
     raw_body: bytes, signature: str, timestamp: str, client_public_key: str

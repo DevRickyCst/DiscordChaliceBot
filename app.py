@@ -1,10 +1,9 @@
+import boto3
 from chalice import Chalice
-from chalicelib.discord import DiscordBot
 
 from chalicelib.decorators.authorize import verify_key_key
 from chalicelib.decorators.ping_handler import ping_handler
-
-import boto3
+from chalicelib.discord import DiscordBot
 
 app = Chalice(app_name="Discord Bot")
 
@@ -34,6 +33,6 @@ def index():
     params = app.current_request.json_body
     print(params)
 
-    response = {"type": 4, "data": {"content": 'hello'}}
+    response = {"type": 4, "data": {"content": "hello"}}
 
     return response

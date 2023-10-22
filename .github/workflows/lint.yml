@@ -17,6 +17,6 @@ jobs:
         pip install black isort
     - name: Analysing the code with pylint
       run: |
-        black $(git ls-files '*.py')
-        isort $(git ls-files '*.py')
+        black $(git ls-files '*.py') --check
+        isort $(git ls-files '*.py') --check
         

@@ -3,3 +3,4 @@ PyNaCl
 gTTS
 PyYAML
 boto3==1.28.54
+chalice==1.29.0

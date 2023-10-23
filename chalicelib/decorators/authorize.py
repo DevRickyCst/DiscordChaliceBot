@@ -1,7 +1,8 @@
+import os
+
 from chalice import Response
 from nacl.signing import VerifyKey
 
-from app import DISCORD_BOT_PUBLIC_KEY
 
 
 def verify_key(
@@ -25,7 +26,7 @@ def verify_key_key(event, get_response):
     if (
         signature is None
         or timestamp is None
-        or not verify_key(event.raw_body, signature, timestamp, DISCORD_BOT_PUBLIC_KEY)
+        or not verify_key(event.raw_body, signature, timestamp, os.environ["DISCORD_BOT_PUBLIC_KEY"])
     ):
         return Response(status_code=401, body="invalide credentiels")
     response = get_response(event)

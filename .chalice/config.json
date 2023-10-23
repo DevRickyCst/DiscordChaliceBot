@@ -1,14 +1,1 @@
-{
-  "version": "2.0",
-  "app_name": "chalice",
-  "stages": {
-    "dev": {
-      "api_gateway_stage": "api",
-      "environment_variables": {
-        "DISCORD_BOT_PUBLIC_KEY": "d543849d7e83e31b062952f9c85c9859276e3d6a7fd8da9c0c7b413424103711",
-        "DISCORD_PRIVATE_KEY": "MTE1NTI3NjY4NDAyNzc1NjYzNg.GchyH6.q9zSYeMhEfvUqQnefeiZUfseu4pM-IU6VrKnZc",
-        "DISCORD_APPLICATION_ID": "1155276684027756636"
-      }
-    }
-  }
-}
+

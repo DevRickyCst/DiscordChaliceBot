@@ -1,4 +1,5 @@
 import boto3
+import os
 from chalice import Chalice
 
 from chalicelib.decorators.authorize import verify_key_key
@@ -9,15 +10,9 @@ app = Chalice(app_name="Discord Bot")
 
 ssm = boto3.client("ssm")
 
-DISCORD_APPLICATION_ID = ssm.get_parameter(Name="DISCORD_APPLICATION_ID")["Parameter"][
-    "Value"
-]
-DISCORD_BOT_PUBLIC_KEY = ssm.get_parameter(Name="DISCORD_BOT_PUBLIC_KEY")["Parameter"][
-    "Value"
-]
-DISCORD_PRIVATE_KEY = ssm.get_parameter(Name="DISCORD_PRIVATE_KEY")["Parameter"][
-    "Value"
-]
+DISCORD_APPLICATION_ID = os.environ["DISCORD_APPLICATION_ID"]
+DISCORD_BOT_PUBLIC_KEY = os.environ["DISCORD_BOT_PUBLIC_KEY"]
+DISCORD_PRIVATE_KEY = os.environ["DISCORD_PRIVATE_KEY"]
 
 discord = DiscordBot(
     DISCORD_APPLICATION_ID, DISCORD_BOT_PUBLIC_KEY, DISCORD_PRIVATE_KEY
